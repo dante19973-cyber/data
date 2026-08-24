@@ -1,0 +1,13 @@
+let time1 = prompt("1(Г.M.C):");
+let time2 = prompt("2(Г.M.C):");
+let [h1, m1,s1] = time1.split(".").map(Number);
+let [h2, m2,s2] = time2.split(".").map(Number);
+let min1 = h1*60+m1;
+let min2 = h2*60+m2;
+let sec1 = min1*60+s1;
+let sec2 = min2*60+s2;
+let dif = Math.floor(sec2 - sec1);
+let hours = Math.floor(dif / 3600);
+let min = Math.floor((dif % 3600) / 60);
+let sec = Math.floor((dif % 60));
+alert(`Різниця: ${hours} год ${min} хв ${sec} сек`);
